@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script src="jquery-1.11.2.js"></script>
+<script src="jquery-1.11.2.min.map"></script>
+<script type="text/javascript" src="js/epp.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <script src="assets/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+ <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+       minDate: 0,
+        dateFormat: "yy-mm-dd",
+     
+       
+    });
+  });
+  </script>
+    
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> <img src="assets/img/logo.png" height="30" width="35"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li> <a>Mayitos</a></li>
+            <li  class="active"><a href="index.html">Home</a></li>
+             
+            <li ><a href="about.html">Acerca De</a></li>
+            <li  ><a href="contacto.html">Contacto</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <br><br><br>
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h3>Busca tus asientos!</h3>
+         <h4><span class="label label-warning">Origen</span></h4>
+       <p> <select class="form-control" id="origen">
+        
+      </select></p>
+           <h4><span class="label label-warning">Destino</span></h4>
+            <p> <select class="form-control" id="destino">
+      
+      </select></p>
+           <h4><span class="label label-warning">Fecha</span></h4>
+         
+  
+  <input type="text" class="form-control" id="datepicker" placeholder="" aria-describedby="basic-addon1">
+
+        <p><br>
+          <a class="btn btn-lg btn-primary" href="" id="btn_buscar" role="button">Buscar &raquo;</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+   
+    
+ 
+    <br><br><br><br>
+
+
+  
+</body>
+</html>
+ 
+
+<script type="text/javascript">
+$( "#btn_buscar" ).click(function() {
+  idOrigen = $('#origen').val();
+
+  idDestino=$('#destino').val();
+
+  fechaSalida=$('#datepicker').val();
+
+ $(this).attr('href','search.html?idOrigen='+idOrigen+'&idDestino='+idDestino+'&fechaSalida='+fechaSalida);
+});
+
+</script>
+
+

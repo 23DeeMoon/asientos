@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script src="jquery-1.11.2.js"></script>
+<script src="jquery-1.11.2.min.map"></script>
+<script type="text/javascript" src="js/epp.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <script src="assets/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+ <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+       minDate: 0,
+        dateFormat: "yy-mm-dd",
+     
+       
+    });
+  });
+  </script>
+    
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> <img src="assets/img/logo.png" height="30" width="35"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li> <a>Mayitos</a></li>
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="about.html">Acerca De</a></li>
+            <li class="active" ><a href="contacto.html">Contacto</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <br><br><br>
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h3>Contactanos</h3>
+         <h5 align="justify">Expresa tu opinión, sugerencias, quejas y demas en esta parte del sitio. 
+Es de vital importancia para seguir ofreciendole un servicio de calidad
+Buzon de Sugerencias <br><br>
+             
+             <form action="mailto:henryesz@gmail.com" method="post" enctype="text/plain">
+Nombre:<br>
+<input class="form-control" type="text" name="name" size="20"  id="nombre"><br><br>
+Email:<br>
+<input class="form-control" type="text" name="email" size="20" id="email"><br><br>
+Comentario:<br>
+<input class="form-control" type="text" name="comment" size="40" id="comentario">
+<br><br>
+<input class="btn btn-default" type="submit" value="Enviar" id="reset">
+<input class="btn btn-default" type="reset" value="Reset" id="dd">
+</form>
+
+</h5>
+      </div>
+
+    </div> <!-- /container -->
+
+   
+    
+ 
+    <br><br><br><br>
+
+
+  
+</body>
+</html>
+ 
+
+<script type="text/javascript">
+$( "#reset" ).click(function() {
+  $("#dd").click();
+});
+
+</script>
+<script type="text/javascript">
+$( "#btn_buscar" ).click(function() {
+  idOrigen = $('#origen').val();
+
+  idDestino=$('#destino').val();
+
+  fechaSalida=$('#datepicker').val();
+
+ $(this).attr('href','search.html?idOrigen='+idOrigen+'&idDestino='+idDestino+'&fechaSalida='+fechaSalida);
+});
+
+</script>
+
+
